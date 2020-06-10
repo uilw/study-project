@@ -1,0 +1,36 @@
+# server port
+server:
+  port: 8020
+  servlet:
+    context-path: /server
+#
+
+spring:
+  # base info
+  application:
+    name: server
+
+  # redis config
+  redis:
+    host: 101.201.254.58
+    port: 6379
+    password: p@ssw0rd
+
+  # datasource config
+  datasource:
+    url: jdbc:mysql://101.201.254.58:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 1qazXSW@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # security config
+  security:
+    user:
+      name: user
+      password: 123456
+
+# mybatis config
+mybatis:
+  typeAliasesPackage: com.liuw.boot.db.domain
+  mapperLocations: classpath:mapper/*.xml
+  #configLocation: classpath:/mybatis-config.xml
