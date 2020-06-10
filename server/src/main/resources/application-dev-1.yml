@@ -35,4 +35,4 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
   #configLocation: classpath:/mybatis-config.xml
 
-  # this is dev-1 to dev
+  # this is dev-1 to dev asas
