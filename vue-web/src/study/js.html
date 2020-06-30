@@ -13,7 +13,8 @@
 <body>
     <div>暂时看console吧</div>
 
-    <button tyep= "button" onclick="ajaxRequest()">按钮</button>
+    <button type= "button" onclick="ajaxRequest()">按钮</button>
+
 
 </body>
 <script src="lr.js"></script>
@@ -79,6 +80,8 @@
         }
         xhr.open("get","http://101.201.254.58:8910/test/info/1",true);
         xhr.send(null);
+        console.log(`再次执行了ajax`);
+        console.log(xhr.readyState);
     }
     
 </script>
