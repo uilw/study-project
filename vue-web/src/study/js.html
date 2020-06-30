@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>今天是4月21日-js页面</title>
+    <base target="_blank"/>
+    <link rel="stylesheet" href="">
+    <script></script>
+    <style></style>
+    <button tyep= "button" onclick="ajaxRequest()">按钮</button>
+</head>
+
+<body>
+    <div>暂时看console吧</div>
+
+</body>
+<script src="lr.js"></script>
+<script>
+    var person = {
+        // firstName:"Bill",
+        // lastName: "Gates",
+        fullName: function(canshuOne, canshuTwo) {
+            return this.firstName + " " + this.lastName + " " + canshuOne + " " + canshuTwo
+        }
+    }
+    var person1 = {
+        firstName: "person1对象用call方法",
+        lastName: "调用所有者对象person的方法"
+    }
+    var person2 = {
+        firstName: "这个是用person2对象",
+        lastName: "调用person方法"
+    }
+    var person3 = {
+        firstName: "这个是用person3对象",
+        lastName: "调用person方法"
+    }
+    // console.log(person.fullName())这个是调用person
+    console.log(person.fullName.call(person1,"参数1","参数2"))
+    console.log(person.fullName.call(person2))
+    console.log(person.fullName.apply(person3,["数组形式的参数1", "数组形式的参数2"]))
+    console.log(person)
+    var a = 1;
+    var b = "1";
+    var c = "a";
+    a++;
+    b++;
+    c++
+    console.log(typeof a)
+    console.log(typeof b)
+    console.log(c)
+    console.log( a == b );
+    // try-catch语句
+    try {
+        consle.log(0);
+        // new eval();
+    } catch (error) {
+        // message属性-所有浏览器都支持-跨浏览器编程最好只用message属性
+        alert(error.message);
+        alert(error.name);
+        console.log(`判断类型：${error instanceof ReferenceError}`);
+    }finally{
+        console.log("finally子句总会执行");
+    }
+
+    function ajaxRequest() {
+        console.log(`执行了ajax`);
+        var xhr = new XMLHttpRequest();
+        xhr.onReadyStateChange = function() {
+            if(xhr.readyState == 4) {
+                if((xhr.status > 200 && xhr.status < 300)|| xhr.status ==304){
+                    alert(xhr.responseText);
+                }
+            } else {
+                alert(`Request was unsuccessful: &{xhr.status}`)
+            }
+        }
+        xhr.open("get","http://101.201.254.58:8910/test/info/1",true);
+        xhr.send(null);
+    }
+    
+</script>
+
+</html>

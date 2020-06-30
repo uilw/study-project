@@ -1,0 +1,607 @@
+<!-- 文档类型  -->
+<!DOCTYPE html>
+
+<!-- html骨架 -->
+<!-- html是根元素，规定页面语言的好位置 -->
+<!-- 应用程序缓存要在html中启动 -->
+<html lang="en-Us" manifest="lr.appcache">
+
+    <!-- html5中head标签可以省略 降低html复杂性 -->
+    <head>
+        <!-- 字符集 -->
+        <!-- 对语言和字符集的定义越早越好 -->
+        <meta charset="UTF-8" />
+        <title>今天是4月10日-html页面</title>
+        <base target="_blank" />
+        <!-- type属性不是必需的哦 -->
+        <link rel="stylesheet" href="" />
+        <!-- 脚本必需type属性 -->
+        <!-- html5又说type属性不是必需的，好奇怪 -->
+        <!-- 当浏览器解析到该元素时，会暂停浏览器的渲染，直到该资源加载完毕。这也是将js脚本放在底部而不是头部的原因。 -->
+        <script type="">
+            // 本地存储 咋不生效？
+            // localStorage.setItem("firstName","本地存储");
+            // document.getElementById("locStore").innerHtml = localStorage.getItem("firstName")
+        </script>
+        <style>
+            .classList {
+                background-color: red;
+            }
+
+        </style>
+        
+        <!-- 完整的 Shiv 解决方案 -->
+        <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    </head>
+
+    <body>
+        <!-- 导航栏 -->
+        <a href="css.html">CSS展示页面</a>
+        <a href="js.html">js展示页面</a>
+        <br /><br />
+
+        <!-- html5语义元素 -->
+        <!-- 语义元素不能决定如何嵌套 -->
+        <!-- 一个文档可以有多个header -->  
+        <h3>HTML5语义元素</h3>   
+        <header>header-有啥用？</header>
+        <nav>nav-导航-有啥用？</nav>
+        <article>article-有啥用？</article>
+        <section>section-节-有啥用?</section>
+        <main>main-有啥用？</main>
+        <mark>mark-标黄</mark>
+        <summary>summary-有啥用？</summary>
+        <aside>aside-有啥用？</aside>
+        <figure>figure-有啥用？</figure>
+        <figcaption>figcaption-有啥用？</figcaption>
+        <details>details-折叠起来了</details>
+        <time>time-据说不支持</time>
+        <!-- 一个文档可以有多个footer -->
+        <footer>footer-有啥用？</footer><br />        
+
+        <h3>基本标签</h3>
+        <h5>h1~6标题</h5>
+        <p>这是一个段落</p>
+        <span>放个span</span>
+        <!-- 关闭空的html元素 -->
+        <br />
+        <span>上面换行,下面写个水平线</span>
+        <hr />
+        <div>div,哈哈，它不需要换行</div><br />
+
+        <div><strong>文本格式化标签在下面</strong></div><br />
+
+        <!-- 图片 -->
+        <!-- 定义尺寸，减少闪烁 -->
+        <h3>图片、链接、特殊字符</h3>
+        <img src="../assets/logo.png" alt="没加载出来" title="vue上的图标" width="100px" height="100px" />
+
+        <!-- 链接 -->
+        <a href="http://101.201.254.58:8500/" target="_blank">放个宝宝的链接</a>
+        <a href="#jump" target="_self">锚点定位</a><br />
+
+        <!-- 特殊字符 -->
+        <div>特殊字符:&nbsp;空格&lt;小于&gt;大于&amp;与&times;乘&divide;除3&sup2;平方，3&sup3;立方 </div><br />
+
+        <h3>列表</h3>
+        <ul type="square">
+            <li>化妆品</li>
+            <li>衣服</li>
+            <li>配饰</li>
+        </ul>
+
+        <ol type="I">
+            喜欢吃的水果
+            <li>荔枝</li>
+            <li>龙眼</li>
+            <li>梨子</li>
+        </ol>
+
+        <dl>
+            <dt>衣服</dt>
+            <dd>上衣</dd>
+            <dd>裤子</dd>
+            <dd>内衣</dd>
+        </dl><br />
+
+        <!-- 表格 只写了基本-->
+        <h3>表格</h3>
+        <table border="1" cellspacing="4px" cellpadding="2px">
+            <!-- 标题必须紧随table -->
+            <caption>表格标题</caption>
+            <colgroup>
+                <col style="background-color: yellow" span="2">
+                <col style="background-color: red">
+                <!-- <col style="background-color: gray"> -->
+            </colgroup>
+            <!-- 表头要写在colgroup后 -->
+            <thead><tr>
+                    <th>公司名称</th>
+                    <th>公司位置</td>
+                    <th>薪资水平</td>
+                </tr>
+                <tr> 
+                    <td rowspan="2">111</td>
+                    <td colspan="2">222</td>
+                </tr> 
+                <tr>
+                    <td>54</td>
+                    <td>55</td>
+                </tr>
+            </thead>
+            <tr>
+                <th>公司名称</th>
+                <th>公司位置</td>
+                <th>薪资水平</td>
+            </tr>
+            <tr> 
+                <td rowspan="2">111</td>
+                <td colspan="2">222</td>
+            </tr> 
+            <tr>
+                <td>54</td>
+                <td>55</td>
+            </tr>
+        </table><br />
+
+        <!-- 表单 -->
+        <!-- action method name -->
+        <!-- HTML5-新增 autocomplete novalidate属性 -->
+        <h3>表单</h3>
+        <form action="" method="" name="firstForm" autocomplete="" novalidate id="firstform">
+            <fieldset>
+                <legend>基本input类型</legend>
+                <!-- labbel标签 -->
+                <!-- for绑定id -->
+                <label for="name">text</label>
+                <!-- input类型 -->
+                <input type="text" id="name" value="刘芮" readonly/>
+                <br>
+                <label for="password">password</label>
+                <input type="password">
+                <br>
+                <label for="sex">radio</label>
+                <input type="radio" id="sex" name="sex"/>男
+                <input type="radio" id="sex" name="sex"/>女
+                <br>
+                <label for="like">checkbox</label>
+                <input type="checkbox" id="like"/>唱歌
+                <input type="checkbox" id="like">跳舞
+                <input type="checkbox" id="like">打篮球
+                <br>
+                <label for="button">button</label>
+                <input type="button" name="" id="button" />
+                <br>
+                <label for="submit">submit</label>
+                <input type="submit">
+                <br>
+            </fieldset>
+        </form>
+
+        <form action="" method="" name="secondform">
+            <fieldset>
+                <legend>HTML5-input类型</legend>
+                <label for="search">search</label>
+                <input type="search" />
+                <label for="">删除X</label>
+                <br />
+                <label for="tel">tel</label>
+                <input type="tel">
+                <span>有啥用</span>
+                <br />
+                <label for="email">email</label>
+                <input type="email">
+                <span>有啥用</span>
+                <br />
+                <label for="url">url</label>
+                <input type="url" name="" id="url">
+                <span>有啥用</span>
+                <br />
+                <label for="color">color</label>
+                <input type="color" name="" id="color">
+                <br />
+                <label for="number">number</label>
+                <input type="number" id="number">
+                <br />
+                <label for="range">range</label>
+                <input type="range">
+                <br />
+                <label for="month">month</label>
+                <input type="month" id="month" />
+                <br />
+                <label for="week">week</label>
+                <input type="week" id="week">
+                <br />
+                <label for="date">date</label>
+                <input type="date" id="date">
+                <br />
+                <label for="time">time</label>
+                <input type="time" id="time">
+                <br />
+                <label for="datetime">datetime</label>
+                <input type="datetime" id="datetime" name="">
+                <span>datetime有啥用</span>
+                <br />
+                <label for="datetimel">datetimel</label>
+                <input type="datetime-local" name="" id="datetimel">
+            </fieldset>
+
+            <fieldset>
+                <legend>其他表单元素</legend>
+                <!-- 文本域 -->
+            <label for="experience">工作经历</label>
+            <textarea name="experience" id="experience" cols="30" rows="3"></textarea>
+            <br>
+
+            <!-- 下拉菜单 -->
+            <label for="job">职位</label>
+            <select name="jbo" id="job">
+                <option value="">前端</option>
+                <option value="" selected>后端</option>
+                <option value="">测试</option>
+                <option value="">运维</option>
+            </select>
+            <br>
+
+            <!-- 按钮 -->
+            <button>这个按钮和提交有啥区别呢</button>
+            <br />
+            </fieldset>
+
+            <fieldset>
+                    <legend>HTML5-新表单元素</legend>
+                    <label for="datalist">datalist</label>
+                    <input type="text" list="datalist1" name="datalist1"/>
+                    datalist有用了，之前用在url类型的input上没用，可是例子举例用的是url类型的
+                    <datalist id="datalist1">
+                        <option value="1" label="1"></option>
+                    </datalist>
+                    <br />
+                    <label for="keygen">keygen</label>
+                    <keygen />
+                    <span>有问题</span>
+                    <br />
+                    <label for="output">output</label>
+                    <output></output>
+                    <span>有问题</span>
+            </fieldset>
+
+            <fieldset>
+                <legend>HTML5-表单新增属性</legend>
+                <label for="">autocomplete</label><br />
+                <label for="">novalidate</label>
+            </fieldset>
+
+            <fieldset>
+                    <legend>HTML5-新增属性</legend>
+                    <label for="">autocomplete</label>
+                    <input type="text" autocomplete="additional-name"/>
+                    <span>有啥用</span>
+                    <br />
+                    <span>autofocus</span>
+                    <input type="text"autofocus/>
+                    <br />
+                    <label for="form">form</label>
+                    <input type="text" name="" id="form" form="firstform secondform" />
+                    <br />
+                    <label for="">formovrides-formaction、formenctype、formnovalicate、formmethod、formtarget</label>
+                    <br />
+                    <label for="placeholder">placeholder</label>
+                    <input type="text" placeholder="placeholder" id="placeholder" />
+                    <br />
+                    <label for="require">required</label>
+                    <input type="text" required />
+                    <br />
+                    <label for="">height、width</label>
+                    <input type="image" src="../assets/logo.png" height="100px" width="100px" />
+                    <span>竟然有image类型的input</span>
+                    <br />
+                    <label for="">min、max、step</label>
+                    <input type="range" min="1" max="10" step="2" />
+                    <br />
+                    <label for="">list</label>
+                    <input type="text" list="datalist2">
+                    <datalist id="datalist2">
+                        <option value="12"></option>
+                        <option value="123"></option>
+                    </datalist>
+                    <br />
+                    <label for="mutiple">multiple</label>
+                    <input type="file" multiple>
+                    <span>竟然还有file类型的input</span>
+                    <br />
+                    <label for="">pattern</label>
+                    <input type="text" pattern="[A-z]{3}" name="pattern">
+                    <span>正则表达式还是要看看，菜鸟有</span>   
+                </fieldset>           
+        </form>
+
+        <!-- 文本格式化 -->
+            <h3>文本格式化标签</h3>
+            <span>正常</span>
+            <b>加粗</b>
+            <strong>加重语气</strong>
+            <i>斜体</i>
+            <em>着重</em>
+            <del>删除线</del>
+            <ins>插入</ins>
+            <small>小字</small>
+            <big>大字</big>
+            <sub>下标</sub>
+            <sup>上标</sup>
+            <br>
+            <!-- 计算机输出标签 -->
+            <pre>预格式文本，说是保留空格 和换行
+
+                    的
+                </pre>
+            <code>code</code>
+            <kbd>kbd</kbd>
+            <samp>samp</samp>
+            <tt>tt 123255</tt>
+            <var>var 定义变量</var>
+            <br>
+            <!-- 引用和术语定义 -->
+            <abbr title="缩写">缩写</abbr>
+            <acronym title="首字母缩写">首字母缩写</acronym>
+            <address>地址 华舟小区</address>
+            <bdo dir="rtl">方向</bdo>
+            <blockquote>长引用，是个块</blockquote>
+            <q>短引用，是个行内</q>
+            <cite>引用</cite>
+            <dfn>定义项目</dfn>
+            <br /><br />
+
+            <!-- 试一个内联框架 -->
+            <h3>内联框架</h3>
+            <iframe src="http://101.201.254.58:8500/" frameborder="0" height="200px"></iframe>
+            <div id="jump"></div>
+
+
+            <!-- 拖放 -->
+            <h3>拖放</h3>
+            <label for="">draggable</label>
+            <input type="text" draggable="true" ondragstart="drag(ev)" id="drag1"/>
+            <span>拖动先不看吧，急着洗头</span>
+            <br />
+
+            <!-- canvas -->
+            <h3>HTML5 canvas</h3>
+            <canvas id="myCanvas" width="200px" height="200px" style="border: 1px solid red;"></canvas>
+            <canvas id="bhCanvas" width="200px" height="200px"></canvas>
+            <canvas id="jxCanvas" width="200px" height="200px"></canvas>
+            <button id="clearR">clearRect</button>
+            <br />
+
+            <!-- SVG -->
+            <h3>HTML5 SVG</h3>
+            <svg style="height: 100px; width: 100px; "></svg>
+            <span>看起来比较麻烦，还要看教程吗</span>
+            <br />
+
+            <!-- video -->
+            <label for="">video</label>
+            <video  controls height="300px" width="300px" autoplay loop>
+                <source src="paofu.mp4"/>
+            </video>
+            <br />
+
+            <!-- audio -->
+            <label for="">audio</label>
+            <audio  controls>
+                <source src="paofu.mp3"/>
+            </audio>
+            <br /><br />
+
+            <h3>HTML5中的API</h3>
+            <!-- 获取页面元素 -->
+            <label for="">document.querySelector("");</label>
+            <span id="selector">看看能不能选中</span>
+            <br />
+            <label for="">document.querySelectorAll("");</label>
+            <span class="selectorAll">全选1</span>
+            <br />
+            <label for="">document.querySelectorAll("");</label>
+            <span class="selectorAll">全选2</span>
+            <br />
+            <!-- 类名操作 -->
+            <h6><div>dom元素.classList</div></h6>
+            <button onclick="addClass()">dom元素.classList.add("")</button>
+            <button onclick="removeClass()">dom元素.classList.remove("")</button>
+            <button onclick="containsClass()">dom元素.classList.contains("")</button>
+            <button onclick="toggleClass()">dom元素.classList.toggle("")</button><br />
+            <!-- 自定义属性 -->
+            <label for="">自定义属性data-</label><br />
+            <!-- 文件读取 -->
+            <label for="">FileReader</label>
+            <input type="file" /><br />
+            <!-- 获取网络状态 -->
+            <label for="">window.navigator.onLine</label>
+            <span>window.ononline事件</span>
+            <span>window.onoffline事件</span><br />
+
+            <!-- 地理定位 -->
+            <label for="">地理定位window.navigator.geolocation.</label>
+            <span id="geolocation"></span>
+            <span>不知道咋是成功</span>
+            <br /><br />
+
+            <!-- 本地存储 -->
+            <label for="">localStorage</label>
+            <span id="locStore" style="width: 200px; height: 100px;"></span>
+            <!-- <span>本地存储放在body下面生效了，放在head里咋不生效呢？</span> -->
+            <!-- <span>span设了宽高咋不生效呢？因为span是行内元素啊</span> -->
+            <button class="setItem">setItem</button>
+            <button class="getItem">getItem</button>
+            <button class="removeItem">removeItem</button>
+            <button class="clearItem">clear</button>
+            <br />
+
+            <!-- sessionStorage -->
+            <label for="">sessionStorage</label>
+            <span id="sesStore"></span>
+            <button class="setItems">setItem</button>
+            <button class="getItems">getItem</button>
+            <button class="removeItems">removeItem</button>
+            <button class="clearItems">clearItem</button>
+            <br /><br />
+
+            <!-- webworker -->
+            <label for="">webworker</label>
+            <span>咋没看出来在哪</span><br /><br />
+
+            <!-- 服务器发送事件 -->
+            <label for="">服务器发送事件</label>
+            <span>这个咋看不懂</span>
+
+        
+
+
+
+
+    </body>
+    <script>
+        // 拖动
+        function drag(ev) {
+            // console.log('开始拖动')
+            // console.log(ev)
+        }
+
+        // canvas绘制
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(30,30);
+        // 注意：开始是moveTo,后来是lineTo
+        ctx.lineTo(200,30);
+        ctx.stroke()
+
+        // 在绘制新的图形前，开启新的图层
+        ctx.beginPath();
+        ctx.moveTo(60,60);
+        ctx.lineTo(200,60);
+        // ctx.stroleStyle = "red"
+        ctx.stroke();
+
+        // 带样式的线
+        ctx.beginPath();
+        ctx.moveTo(100,100);
+        ctx.lineTo(200,200);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = "10"
+        ctx.stroke()
+
+        // 闭合路径
+        var bh = document.getElementById("bhCanvas")
+        var bhtx = bh.getContext("2d");
+        bhtx.moveTo(5,5);
+        bhtx.lineTo(80,5);
+        bhtx.lineTo(80,80);
+        bhtx.closePath();
+        bhtx.fillStyle="green"
+        bhtx.fill()
+
+        // 绘制矩形
+        var jx = document.querySelector("#jxCanvas")
+        var jxtx = jx.getContext("2d");
+        jxtx.rect(10,10,100,100);
+        jxtx.stroke();
+        var clearBtnr = document.getElementById("clearR")
+        clearBtnr.onclick = function() {
+            // console.log("清除")
+            jxtx.clearRect(0,0,300,300);
+        }
+        // HTML5API
+        document.querySelector("#selector").style.color = "red";
+        // 原来querySelectorAll是个列表，为了找出问题，宝宝帮我打了这两个console
+        // console.log(document.querySelector("#selector"))
+        // console.log(document.querySelectorAll(".selectorAll"))
+        document.querySelectorAll(".selectorAll")[0].style.color =  "green";
+
+        var classlist = document.querySelector("h6 div")
+        // console.log(`这个是classlist:${classlist}`)
+        // 添加类名
+        function addClass() {
+            classlist.classList.add("classList")
+            function a () {
+                // console.log(classlist);
+                // console.log(this.classlist);
+            }
+            a();
+        }
+        // 移除类名
+        function removeClass() {
+            classlist.classList.remove("classList")
+        }
+        // 检测是否包含类名
+        function containsClass() {
+            console.log(classlist.classList.contains("classList"))
+        }
+        // 切换类样式
+        function toggleClass() {
+            classlist.classList.toggle("classList")
+        }
+
+        // 获取网络状态
+        var state = window.navigator.onLine
+        if(state) {
+            console.log("处于联网状态");
+        } else {
+            console.log("网络掉了");
+        }
+
+        // 地理定位
+        window.navigator.geolocation.getCurrentPosition(success,error);
+        function success(position) {
+            console.log("地理定位${positon}");
+        }
+        function error(msg) {
+            console.log("没法地理定位");
+            document.getElementById("geolocation").innerHTML = "没法地理定位"
+        }
+
+        // localStorage
+        // 设置存储内容
+        var setBtn = document.querySelector(".setItem")
+        setBtn.onclick = () => {
+            console.log(localStorage);
+            // debugger
+            localStorage.setItem("first","刘");
+            console.log(localStorage);
+        }
+        // 获取内容
+        var getBtn = document.querySelector(".getItem")
+        getBtn.onclick = () => {
+            document.getElementById("locStore").innerHTML = localStorage.getItem("first");
+        }
+        // 删除内容
+        var removeBtn = document.querySelector(".removeItem")
+        removeBtn.onclick = () => {
+            window.localStorage.removeItem("first")
+        }
+        // 清空内容
+        var clearBtn = document.querySelector(".clearItem")
+        clearBtn.onclick = () => {
+            window.localStorage.clear()
+        }
+
+        // sessionStorage
+        var setBtns = document.querySelector(".setItems");
+        setBtns.onclick = () => {
+            window.sessionStorage.setItem("set","伟")
+        }
+        var getBtns = document.querySelector(".getItems")
+        getBtns.onclick = () => {
+            document.getElementById("sesStore").innerHTML = window.sessionStorage.getItem("set")  
+        }
+        var removeBtns = document.querySelector(".removeItems")
+        removeBtns.onclick = () => {
+            window.sessionStorage.removeItem("set");
+        }
+        var clearBtns = document.querySelector(".clearItems")
+        clearBtns.onclick = ()=> {
+            window.sessionStorage.clear()
+        }
+    </script>
+</html>

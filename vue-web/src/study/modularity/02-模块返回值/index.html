@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="user">用户模块</button>
+    <button id="product">商品模块</button>
+    
+</body>
+<script src="../require.js"></script>
+<script>
+    require(["user","product"], function(user,product) {
+        var btnUser = document.getElementById("user")
+        btnUser.onclick = function() {
+            user();
+        }
+
+        var btnProduct = document.getElementById("product")
+        btnProduct.onclick =()=> {
+            product.init();
+        }
+    })
+</script>
+</html>

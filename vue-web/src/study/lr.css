@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 标签选择器（元素选择器、类型选择器） */
+h4 {
+    color: red;
+}
+/* 类选择器 */
+.class-selector {
+    color: red;
+}
+/* 多类选择器 */
+.duo-lei.xuan-ze-qi {
+    color: red;
+}
+/* id选择器 */
+#id-selector {
+    color: red;
+}
+/* 属性选择器 */
+/* 
+  [attribute]	用于选取带有指定属性的元素。
+  [attribute=value]	用于选取带有指定属性和值的元素。
+  [attribute~=value]	用于选取属性值中包含指定词汇的元素。
+  [attribute|=value]	用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。
+  一个更高级的选择器模块，它是 CSS2 完成之后发布的，其中包含了更多的部分值属性选择器。
+  按照规范的说法，应该称之为“子串匹配属性选择器”。
+  [attribute^=value]	匹配属性值以指定值开头的每个元素。
+  [attribute$=value]	匹配属性值以指定值结尾的每个元素。
+  [attribute*=value]	匹配属性值中包含指定值的每个元素。
+   */
+[title=shuxing] {
+    color: red;
+}
+/* 通配符选择器 */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 交集选择器 */
+p.important {
+    color: red;
+}
+/* 并集选择器 */
+.bingji-one, .bingji-two {
+    color: red;
+}
+
+/* 后代选择器（包含选择器）*/
+div .houdai-baohan {
+    color: red;
+}
+/* 发现p标签里不能放div */
+
+/* 子元素选择器 */
+div > .child {
+    color: red;
+}
+/* 相邻兄弟选择器 */
+.brother-one + .brother-two {
+    color: red;
+}
+/* 超链接 */
+a:link {
+    color: red;
+}
+a:visited {
+    color: palevioletred;
+}
+/* 在 IE 中，必须添加 <!DOCTYPE>，这样才能将 :hover 选择器用于除了 <a> 之外的其它元素 */
+a:hover {
+    color: blue;
+}
+a:active {
+    color: yellow;
+}
+
+
+/* 背景颜色 */
+.bgcolor {
+    background-color: red;
+}
+/* 背景图片 */
+.bgimage {
+    background-image: url(../assets/logo.png)
+}
+/* 背景平铺 */
+/* 背景滚动 */
+/* 背景位置 */
+/* 背景透明 */
+.bgtouming {
+    background: rgba(0,0,0,0.3);
+}
+/* CSS3 背景 */
+/* html {
+    background: url(../assets/logo.png);
+    background-size: contain;
+    background-origin: padding-box;
+} */
+
+/* 首行缩进 */
+.tx-indent {
+    text-indent: 2em;
+}
+.tx-xuangua {
+    text-indent: -2em;
+    padding-left: 2em;
+}
+/* 水平对齐方式 */
+.tx-align {
+    text-align: center;
+    border: 2px solid red;
+}
+center {
+    border: 2px solid red;
+}
+.tx-justify {
+    text-align: justify;
+}
+/* 文本颜色 */
+.yanse {
+    color: #0f0;
+}
+/* 文本方向 */
+.fangxiang {
+    direction: rtl;
+}
+/* 也是文本方向 */
+/* 对于行内元素，只有当 unicode-bidi 属性设置为 embed 或 bidi-override 时才会应用 direction 属性。 */
+.tx-ubd {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+/* 行间距（行高） */
+.tx-hei {
+    line-height: 40px;
+    border: 1px solid red;
+}
+/* 字间隔 */
+.tx-wsp {
+    word-spacing: 2em;
+}
+/* 字母间隔 */
+.tx-lsp {
+    letter-spacing: 1em;
+}
+/* 字符转换 */
+.tx-tra {
+    text-transform: capitalize;
+}
+/* 文本装饰 */
+.tx-dec {
+    text-decoration: overline underline line-through;
+}
+/* 文本阴影 */
+.tx-sha {
+    text-shadow: 2px 2px 2px red;
+}
+/* 自动换行 */
+.tx-wr {
+    width: 405px;
+    word-wrap: break-word;
+}
+
+/* 字体 */
+.ft-f {
+    font-family: serif;
+    font-family: sans-serif;
+    font-family: monospace;
+    font-family: cursive;
+    font-family: fantasy;
+}
+/* 字体风格 */
+.ft-s {
+    font-style: italic;
+}
+/* 字体变形 */
+.ft-v {
+    font-variant: small-caps;
+}
+/* 字体粗细 */
+.ft-v {
+    font-weight: 700;
+}
+/* 字号大小 */
+body {
+    font-size: 100%;
+}
+.ft-si {
+    font-size: 1.5em;
+}
+/* 字体综合 */
+.ft {
+    font: italic 700 1.2em/30px serif;
+}
+
+/* 列表类型 */
+ul.ls-t {
+    list-style-type: square;
+    list-style-position: inside;
+}
+/* 列表项图像 */
+ol li {
+    list-style-image: url(../assets/logo.png);
+    list-style-position: inside;
+}
+/* 列表图标位置 */
+ul.inside {
+    list-style-position: inside;
+}
+
+/* 轮廓颜色 */
+.out-c {
+    outline-color: red;
+    outline-style: dashed;
+}
+/* 轮廓样式 */
+.out-s {
+    outline-style: solid;
+}
+/* 轮廓宽度 */
+.out-w {
+    outline-style: dotted;
+    outline-width: 5px;   
+}
+/* 轮廓综合 */
+.out {
+    outline: green solid 4px;
+}
+
+/* 上边框 */
+.b-t-s {
+    border-top-style: solid;
+}
+/* 右边框 */
+.b-r-s {
+    border-right-style: dashed;
+}
+/* 下边框 */
+.b-b-s {
+    border-bottom-style: dotted;
+}
+/* 左边框 */
+.b-l-s {
+    border-left-style: double;
+    /* margin: 4px; */
+    /* 为了让边框能看到加了margin */
+}
+/* 边框 */
+.b-s {
+    border-style: solid dashed dotted double;
+    /* margin: 4px; */
+    /* 为了让边框能看到加了margin */
+}
+.bor-c {
+    border-color: transparent;
+    border-width: 20px;
+    background-image: url(../assets/logo.png);
+}
+/* 表格的细线边框（合并边框） */
+.tab-b {
+    display: inline-block;
+    /* 设为行内块，好把表格放在标题后面 */
+    border: 2px solid red;
+    border-collapse: collapse;
+}
+/* 圆角边框 */
+.bor-r {
+    border: 2px solid red;
+    border-radius: 2em;
+}
+.bor-rr {
+    border: 2px solid red;
+    border-radius: 2em 1em 4em / 0.5em 3em;
+}
+/* 盒子阴影 */
+.box-s {
+    box-shadow: 10px 10px 5px 2px #888888 inset;
+}
+/* 给h5标题加个蓝色 */
+.h5 {
+    color: blue;
+}
+/* h6标题不显眼，用div加个颜色代替h6 */
+.h6 {
+    color: blueviolet;
+}
+/* 空格打得累人，用pre */
+.nbsp {
+    font-family: Microsoft YaHei;
+    font-size: 16px;
+}  
+/* 导航栏 */
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* 垂直导航栏 */
+.cz-nav,hn-lbx {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.cz-nav a {
+    display: block;
+    width: 100px;
+}
+/* 行内列表项 */
+.hn-lbx a {
+    display: online;
+}
+/* 浮动列表项 */
+.fd-lbx a {
+    float: left;
+    width: 50px;
+}
+/* 2D转换方法 */
+.tran {
+    width: 400px;
+    border: 2px solid red;
+    transform: translate(100px,10px);
+}
+.rota {
+    width: 400px;
+    border: 2px solid green;
+    transform: rotate(-5deg);
+}
+/* 里面的文本、border、margin等也随之改变 */
+.scale {
+    width: 200px;
+    height: 5px;
+    border: 2px solid blue;
+    transform: scale(10,2);
+    margin: 10px;
+    padding: 0px;
+}
+.skew {
+    width: 800px;
+    border: 2px solid pink;
+    transform: skew(20deg, 0deg);
+}
+.matrix {
+    width: 500px;
+    border: 2px solid red;
+    transform: matrix(10px, 10px, 10px, 10px, 10px, 10px);
+}
+/* 3D转换 */
+.rotatex {
+    border: 2px solid red;
+    transform: rotateX(30deg);
+}
+.rotatey {
+    border: 2px solid red;
+    transform: rotateY(30deg);
+}
+.transition {
+    border: 2px solid red;
+    width: 500px;
+    transition: width 2s;
+}
+.transition:hover {
+    width: 1000px;
+}
+/* 水平垂直居中面试题 */
+.a {
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid red;
+    /* 
+      行内元素：
+      给父元素设text-align：center;
+      （适用于行内元素，且父元素为块级元素,父元素如果不是块级，转为块级，先用display:block;） 
+      */
+    /* text-align: center; */
+    /* position: relative; */
+    display: table-cell;
+    vertical-align: middle;
+}
+.b {
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
+    /* line-height: 1000px; */
+    /* 
+      块级元素： 
+      方法一：元素设margin:0 auto;（适用于块级元素，定宽度）
+      */
+    /* margin: 0 auto; */
+    /* 
+      块级元素： 
+      方法二：1、元素转换为行内块或行内 display: inline/inline-block;2、再给父元素设text-align：center;
+      （适用于块级元素，不定宽度）--理解：不定宽度，块级元素默认宽度就和父元素一样了
+      */
+    /* display: inline; */
+    /* position: absolute;
+    left: 50%; */
+    display: flex;
+    justify-content: center;
+    /* 
+      用定位
+      1、子绝父相，
+      2、left:50%,
+      3、（定宽度）再margin-left: -（减）元素宽度的一半；
+      或者（不定宽度）用css3的transform 
+      */
+    /* margin-left: -50px; */
+    /* transform: translateX(-50%); */
+}
+
+
+
+
+
+
+
+
+

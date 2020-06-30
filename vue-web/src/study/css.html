@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!-- css样式表-层叠样式表-级联样式表 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4月12-CSS展示页面</title>
+    <base href="" target="_blank">
+    <link rel="stylesheet" href="lr.css">
+</head>
+<body>
+    <h3>CSS基础选择器</h3>
+    <h4>标签选择器（元素选择器、类型选择器）</h4>
+    <div class="class-selector">类选择器"."</div>
+    <div class="duo-lei xuan-ze-qi">多类选择器 给元素指定多类用空格分隔</div>
+    <div id="id-selector">id选择器“#”</div>
+    <div title="shuxing">属性选择器“[]"</div>
+    <br />
+    <h3>CSS复合选择器</h3>
+    <p class="important">1、交集选择器</p>
+    <span class="bingji-one">2、并集选择器</span>
+    <span class="bingji-two">“,”连接</span>
+    <br />
+    <div>3、派生选择器（css2叫法，css1叫上下文选择器）</div>
+    <div>
+        <span class="houdai-baohan">&nbsp;&nbsp;后代选择器（包含选择器）“ ”空格</span>    
+    </div>
+    <div>
+        <span class="child">&nbsp;&nbsp;子元素选择器 “ >"</span>
+    </div>
+    <span class="brother-one">&nbsp;&nbsp;相邻兄弟选择器"+"</span>
+    <span class="brother-two">只能选择相邻兄弟中的第二个元素</span>
+    <br />
+    <div>4、伪类选择器“：”</div>
+    <span>&nbsp;&nbsp;超链接</span>
+    <a href="" target="_self">link\visited\hover\active</a>
+    <br />
+    <div>&nbsp;&nbsp;CSS2 :focus</div>
+    <div>&nbsp;&nbsp;CSS2 :first-child伪类</div>
+    <div>&nbsp;&nbsp;CSS2 :lang伪类</div>
+    <div>5、CSS伪元素</div>
+    <div>&nbsp;&nbsp;:first-line伪元素</div>
+    <div>&nbsp;&nbsp;:firsr-letter伪元素</div>
+    <div>&nbsp;&nbsp;CSS2-：before伪元素</div>
+    <div>&nbsp;&nbsp;CSS2-：after伪元素</div>
+    <br />
+    <h3>CSS背景</h3>
+    <div class="bgcolor">background-color</div>
+    <div class="bgimage">background-image&nbsp;url()或none</div>
+    <div>background-repeat: repeat | no-repeat | repeat-x | repeat-y</div> 
+    <div>background-position：length || length或position || position</div>
+    <div>background-attachment : scroll | fixed</div>
+    <div>background:背景颜色 背景图片地址 背景平铺 背景滚动 背景位置</div>
+    <div class="bgtouming">CSS3 &nbsp;&nbsp;background: rgba( , , ,0. );背景透明</div>
+    <div>CSS3 &nbsp;&nbsp;background-size: length(2个值)|percentage(2个值)|cover|contain;</div>	
+    <div>CSS3 &nbsp;&nbsp;background-origin: padding-box|border-box|content-box;  背景图片的定位区域。<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注释：如果背景图像的 background-attachment 属性为 "fixed"，则该属性没有效果。
+    </div>
+    <div>CSS3 &nbsp;&nbsp;background-image:url(), url();多重背景图片</div>	
+    <div>CSS3 &nbsp;&nbsp;background-clip: border-box|padding-box|content-box;  背景的绘制区域</div>	
+	
+
+    
+    <br />
+    <h3>CSS文本</h3>
+    <div class="tx-indent">text-indent</div>
+    <div class="tx-xuangua">用负值实现悬挂缩进</div>
+    <div class="tx-align">text-align只影响内部内容</div>
+    <center>center不仅影响文本，还会把整个元素居中</center>
+    <div class="tx-tra">text-transform 字符转换，首字母大写</div>
+    <div class="tx-dec">text-decoraction 上、中、下都有线</div>
+    <div class="yanse">color</div>
+    <div class="fangxiang">direction 方向 这个不是没有内容哦 注意看右边 为了把它撑大点打了好多字啊</div>
+    <span class="tx-ubd">。行内元素先设置这个</span>
+    <span>&nbsp;&nbsp;unicode-bidi行内元素先设置这个，direction才有效，发现字是反的</span>
+    <div class="tx-hei">line-height</div>
+    <div class="tx-wsp">wordspacing wordspacing:字间隔</div>
+    <div class="tx-lsp">letterspacing：字母间隔</div>
+    <div>white-spacewhite-space:处理空白符</div>
+    <div class="tx-sha">CSS3 &nbsp;&nbsp;文本阴影 text-shadow: h-shadow v-shadow blur color;前两个必需</div>
+    <div class="tx-wr">CSS3 &nbsp;&nbsp;自动换行 word-wrap: normal|break-word;   只在允许的断字点换行（浏览器保持默认处理）|
+            在长单词或 URL 地址内部进行换行。
+    </div>
+    <pre class="nbsp">CSS3 &nbsp;&nbsp;新的文本属性                      
+            hanging-punctuation 规定标点字符是否位于线框之外。 
+            punctuation-trim 规定是否对标点字符进行修剪。 
+            text-align-last 设置如何对齐最后一行或紧挨着强制换行符之前的行。 
+            text-emphasis 向元素的文本应用重点标记以及重点标记的前景色。 
+            text-justify                     规定当 text-align 设置为 "justify" 时所使用的对齐方法。 
+            text-outline                     规定文本的轮廓。 
+            text-overflow 规定当文本溢出包含元素时发生的事情。 
+            text-shadow                     向文本添加阴影。 
+            text-wrap                     规定文本的换行规则。 
+            word-break                     规定非中日韩文本的换行规则。 
+            word-wrap                     允许对长的不可分割的单词进行分割并换行到下一行。</pre>
+
+    <br />
+    <h3>CSS字体</h3>
+    <div class="ft-f">font-family:字体</div>
+    <div class="ft-s">font-style:字体风格</div>
+    <div class="ft-v">font-varient：字体变形，可以设定小型大写字母</div>
+    <div class="ft-w">font-weight:字体粗细</div>
+    <div class="ft-si">font-size:字号大小</div>
+    <div class="ft">font: font-style  font-weight  <ins>font-size</ins>/line-height  
+        <ins>font-family</ins><span>  不能更换顺序，各个属性以空格隔开。必须保留font-size和font-family属性</span>;
+    </div>
+    <div>CSS3 字体 @font-face 规则:使用您需要的字体</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        字体描述符: 例如您必须为粗体文本添加另一个包含描述符的 @font-face</div>
+    <br />
+    <h3>CSS链接</h3>
+    <div>伪类元素那几个</div>
+    <br />
+    <h3>CSS列表</h3>
+    <ul class="ls-t">
+        <li >list-style-type：列表类型</li>
+        <li>好奇怪没用,把position设一下才出来</li>
+    </ul>
+    <ol>
+        <li>list-style-image：列表项图像</li>
+    </ol>
+    <ul class="inside">
+        <li>list-style-position:列表标志位置</li>
+    </ul>
+    <br />
+    <h3>CSS轮廓（CSS2)</h3>
+    <div class="out-c">outline-color 轮廓颜色&nbsp;&nbsp;&nbsp;必须加上outline-style才能显示出来,因为首先要“有”轮廓
+        --举例虚线</div>
+    <div class="out-s">outline-style 轮廓样式--举例实线</div>
+    <div class="out-w">outline-width 轮廓宽度&nbsp;&nbsp;&nbsp;必须加上outline-style才能显示出来,因为首先要“有”轮廓
+        --举例圆点</div>
+    <div class="out">outline: outline-color、outline-style、outline-width--举例绿色</div>
+    <br />
+    <h3>标签显示模式display</h3>
+    <div style="border: red solid 2px">
+        块级元素&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            (1)从新行开始
+            （2）宽度默认是容器的100%
+            （3）高度，行高、外边距以及内边距都可以控制
+            （4）可以容纳内联元素和其他块元素。&nbsp;&nbsp;&nbsp;例如这个div
+    </div>
+    <span style="border: green solid 2px">行内元素（内联元素）
+        （1）和相邻行内元素在一行上
+            （2）默认宽度就是它本身内容的宽度 
+           （3）高、宽无效，但水平方向的padding和margin可以设置，垂直方向的无效。
+            （4）行内元素只能容纳文本或则其他行内元素。（a特殊）
+            例如这个span
+    </span>
+    <br />
+    <span>行内块元素</span>
+    <input>（1）和相邻行内元素（行内块）在一行上,但是之间会有空白缝隙。
+    （2）默认宽度就是它本身内容的宽度。
+    （3）高度，行高、外边距以及内边距都可以控制。例如img、input、td
+    </input>
+    <div>标签显示模式转换&nbsp;&nbsp;&nbsp;
+        块转行内：display:inline; &nbsp;&nbsp;&nbsp;
+            行内转块：display:block; &nbsp;&nbsp;&nbsp;
+            块、行内元素转换为行内块： display: inline-block;
+    </div>
+    <br />
+    <h3>CSS 三大特性</h3>
+    <div>1、层叠性：样式冲突</div>
+    <div>2、继承性：子元素可以继承父元素的样式（text-，font-，line-这些元素开头的都可以继承，以及color属性）</div>
+    <div>3、优先级:CSS特殊性（CSS 特性或称非凡性）
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        关于CSS权重，我们需要一套计算公式来去计算，这个就是 CSS Specificity，我们称为CSS 特性或称非凡性
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            继承或者* 的贡献值	0,0,0,0 &nbsp;&nbsp;
+    每个元素（标签）贡献值为	0,0,0,1 &nbsp;&nbsp;
+    每个类，伪类贡献值为	0,0,1,0&nbsp;&nbsp;
+    每个ID贡献值为	0,1,0,0 &nbsp;&nbsp;
+    每个行内样式贡献值	1,0,0,0 &nbsp;&nbsp;
+    每个!important贡献值	∞ 
+    </div>
+    <br />
+    <h3>盒模型（框模型）</h3>
+    <div>1、所有的文档元素（标签）都会生成一个矩形框，我们称为元素框（element box），
+            它描述了一个文档元素再网页布局汇总所占的位置大小。<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;因此，每个盒子除了有自己大小和位置外，
+            还影响着其他盒子的大小和位置。<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;CSS 框模型 (Box Model) 规定了
+            元素框处理元素内容、内边距、边框 和 外边距 的方式。<br />
+
+                2、边框内的空白是内边距，边框外的空白是外边距<br />
+                <br />
+                3、提示：背景应用于由内容和内边距、边框组成的区域。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;内边距呈现了元素的背景。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;内边距的边缘是边框。边框以外是外边距，<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;外边距默认是透明的，因此不会遮挡其后的任何元素。<br />
+                <br />
+                4、内边距、边框和外边距都是可选的，默认值是零。
+    但是，许多元素将由用户代理样式表设置外边距和内边距。解决方法： *{margin: 0;padding: 0;}<br />
+                <br />
+                5、在 CSS 中，width 和 height 指的是内容区域的宽度和高度。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;增加内边距、边框和外边距不会影响内容区域的尺寸，
+                但是会增加元素框的总尺寸。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;不幸的是，<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;IE5.X 和 6 在怪异模式中使用自己的非标准模型。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;这些浏览器的 width 属性不是内容的宽度，
+                而是内容、内边距和边框的宽度的总和。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;虽然有方法解决这个问题。
+                但是目前最好的解决方案是回避这个问题。<br />
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;也就是，不要给元素添加具有指定宽度的内边距，
+                而是尝试将内边距或外边距添加到元素的父元素和子元素。
+    </div>
+    <br />
+    <h4>1、内边距（padding）</h4>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;元素的内边距在边框和内容区之间。
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;CSS padding 属性定义元素边框与元素内容之间的空白区域。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;padding : 长度值或百分比值，不允许<del>使用负值。</del><br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;padding-top:上内边距<br /> 
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;padding-right:右内边距<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;padding-bottom:下内边距<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;padding-left:左内边距<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;注意：上下内边距与左右内边距一致；<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;即上下内边距的百分数会相对于父元素宽度设置，而不是相对于高度。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        padding:上 右 下 左(顺时针)<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        1个值 padding：上下左右 <br />                                                                                                     
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        2个值 padding: 上下、左右<br />        
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        3个值 padding：上、 左右、下、<br />      
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        4个值 padding:上、右、下、 左;   （顺时针）
+    </div>
+    <br />
+    <h4>2、盒子边框（border）</h4>
+    <div>边框与背景——CSS 规范指出，边框绘制在“元素的背景之上”。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;这很重要，因为有些边框是“间断的”（例如，点线边框或虚线框），
+        元素的背景应当出现在边框的可见部分之间。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;CSS2 指出背景只延伸到内边距，而不是边框。
+        &nbsp;&nbsp;后来 CSS2.1 进行了更正：元素的背景是内容、内边距和边框区的背景。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;大多数浏览器都遵循 CSS2.1 定义，
+        不过一些较老的浏览器可能会有不同的表现。</div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;border-style：none没有边框（默认值）、
+            solid单实线(最常用) 、
+            dashed虚线 、
+            dotted点线 、
+            double双实线</div>
+    <div class="b-t-s">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        border-top-style
+    </div>
+    <div class="b-r-s">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-right-style
+    </div>
+    <div class="b-b-s">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            border-bottom-style
+    </div>
+    <div class="b-l-s">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            border-left-style
+    </div>
+    <div class="b-s">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            border-style: 上、右、下、左;
+    </div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;border-width：长度值、3 个关键字（thin 、medium默认值和 thick）.
+        <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            希望边框出现，就必须声明一个边框样式border-style.&nbsp;&nbsp;&nbsp;
+            如果边框样式为 none，即边框根本不存在，那么边框就不可能有宽度
+    </div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            border-top-width
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    border-right-width
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-bottom-width
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-left-width
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-width: 上、右、下、左;
+        </div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;border-color:&nbsp;&nbsp;&nbsp;命名、十六进制、 RGB 值、 
+        transparent（CSS2透明边框）
+        <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        利用 transparent，使用边框就像是额外的内边距一样；
+此外还有一个好处，就是能在你需要的时候使其可见。
+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+这种透明边框相当于内边距，因为元素的背景会延伸到边框区域（如果有可见背景的话）。
+<br />
+<div class="bor-c">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    border-color: transparent;</div>
+        <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        默认的边框颜色是元素本身的前景色。如果没有为边框声明颜色，它将与元素的文本颜色相同。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+另一方面，如果元素没有任何文本，假设它是一个表格，其中只包含图像，
+那么该表的边框颜色就是其父元素的文本颜色（因为 color 可以继承）。
+<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+这个父元素很可能是 body、div 或另一个 table。
+    </div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            border-top-color
+    </div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    border-right-color
+    </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-bottom-color
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-left-color
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                border-color: 上、右、下、左;&nbsp;&nbsp;&nbsp;如果颜色值小于 4 个，值复制就会起作用。
+        </div>
+        <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;border : border-width || border-style || border-color<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;边框综合设置  border:四边宽度 四边样式 四边颜色;
+        </div>
+        <br />
+        <span>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;border-collapse:collapse; 表格的细线边框（合并边框）</span>
+        <table class="tab-b">
+            <tr>
+            <th>12</th>
+            <th>34</th>
+            </tr>
+            <tr>
+                <td>56</td>
+                <td>78</td>
+            </tr>
+    </table>
+    <br />
+    <br />
+    <span>CSS3 圆角边框</span>
+    <!-- <div>设置所有四个 border-*-radius 属性的简写属性。</div> -->
+    <span>1、border-radius: 左上角 右上角 右下角 左下角;</span>
+    <pre class="nbsp">
+                       <div class="bor-r">                   border-radius:2em;</div>
+                       等价于：
+                       border-top-left-radius:2em;
+                       border-top-right-radius:2em;
+                       border-bottom-right-radius:2em;
+                       border-bottom-left-radius:2em;
+
+                       2、border-radius: 1-4 length|% / 1-4 length|%;
+                       length 定义圆角的形状。 
+                       % 以百分比定义圆角的形状。 
+                       <div class="bor-rr">                  border-radius:2em 1em 4em / 0.5em 3em;</div> 
+                       等价于：
+                       border-top-left-radius: 2em 0.5em;
+                       border-top-right-radius: 1em 3em;
+                       border-bottom-right-radius: 4em 0.5em;
+                       border-bottom-left-radius: 1em 3em;
+                    </pre> 
+                       <span>CSS3 边框图片  border-image:  &nbsp;&nbsp;border-image-source&nbsp;&nbsp;
+                            ~-slice&nbsp;&nbsp;
+                            ~-width&nbsp;&nbsp;
+                            ~-outset&nbsp;&nbsp;
+                            ~-repeat;</span>
+    <pre>
+    
+
+
+    </pre>
+    <h4>3、外边距（margin）</h4>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;围绕在元素边框的空白区域是外边距。设置外边距会在元素外创建额外的“空白”。
+        <br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;margin:任何长度单位、百分数值、负值。
+            margin 可以设置为 auto（占用可用空间）。更常见的做法是为外边距设置长度值。<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;margin-top<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;margin-right<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;margin-bottom<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;margin-left<br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;margin:上 右 下 左;(顺时针)&nbsp;&nbsp;没有4个值，就用“值复制”
+    </div>
+    <div>外边距合并<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;注释：只有普通文档流中块框的垂直外边距才会发生外边距合并。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;行内框、浮动框或绝对定位之间的外边距不会合并。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。
+        &nbsp;&nbsp;合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;1.相邻块元素垂直外边距的合并（外边距塌陷)
+        &nbsp;&nbsp;&nbsp;解决方案： 避免<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;2.嵌套块元素垂直外边距的合并
+        &nbsp;&nbsp;&nbsp;解决方案：1、可以为父元素定义1像素的上边框或上内边距。
+        2、可以为父元素添加overflow:hidden。 待续。。。。<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;3.应用：外边距实现盒子居中
+        &nbsp;&nbsp;&nbsp;让一个盒子实现水平居中，需要满足两个条件：                   
+        1、必须是块级元素。                                                                    
+        2、盒子必须指定宽度（width）                                                    
+       给左右的外边距都设置为auto，就可水平居中。
+    </div>
+    <br />
+    <h4>4、清除元素的默认内外边距 * { padding:0; margin:0; }</h4>
+    <div>注意： 行内元素是只有左右外边距的，是没有上下外边距的。</div>
+    <br />
+    <h4>5、content宽度和高度</h4>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;width和height:
+        不同单位的数值、相对于父元素的百分比%。实际工作中最常用的是像素值。</div>
+    <div>1、/*外盒尺寸计算（元素空间尺寸）*/  <br />                                              
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        Element空间高度 = content height + padding + border + margin Element 空间宽度 
+            = content width + padding + border + margin<br /> 
+            2、/*内盒尺寸计算（元素实际大小）*/<br /> 
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            Element Height = content height + padding + border （Height为内容高度）<br /> 
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;                                                                                         
+            Element Width = content width + padding + border （Width为内容宽度）
+    </div>
+    <div>注意：                                                                                                 
+            1.width和height仅适用于块级元素，对行内元素无效（ img 标签和 input除外）。 <br />
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                            
+            2.计算盒子模型的总高度时，还应考虑上下两个盒子垂直外边距合并的情况。<br />  
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                             
+            3.如果一个盒子没有给定宽度/高度或者继承父亲的宽度/高度，则padding 不会影响本盒子大小。
+    </div>
+    <br />
+    <h4>6、盒子模型布局稳定性</h4>
+    <div>width > padding > margin  优先使用宽度, 其次使用内边距,再次外边距。     </div>
+    <div>
+            原因：                                                                                             
+            1、margin 会有外边距合并 还有 ie6下面margin 加倍的bug（讨厌）所以最后使用。<br />  
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                           
+            2、padding 会影响盒子大小， 需要进行加减计算（麻烦） 其次使用。<br />  
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         
+            3、width 没有问题（嗨皮）我们经常使用宽度剩余法 高度剩余法来做。
+    </div>
+    <br />
+    <h4>7、CSS3  盒子阴影</h4>
+    <div class="box-s">box-shadow: h-shadow v-shadow blur spread color inset;<br />
+        box-shadow:水平阴影 垂直阴影 模糊距离 阴影尺寸 阴影颜色 内/外阴影；</div>
+    <br />
+    <h3>CSS 定位和浮动</h3>
+    <h4>一切皆为框</h4>
+    <div>&nbsp;&nbsp;&nbsp; 1.块框</div>
+    <div>&nbsp;&nbsp;&nbsp; 2.行内框</div>
+    <div>&nbsp;&nbsp;&nbsp; 3.还可以通过把 display 设置为 none，让生成的元素根本没有框。</div>
+    <div>&nbsp;&nbsp;&nbsp; 4.无名块框</div>
+    <div>&nbsp;&nbsp;&nbsp; 5.块级元素的文本行也会发生类似的情况。假设有一个包含三行文本的段落。
+        每行文本形成一个无名框。<br />
+        &nbsp;&nbsp;&nbsp; 无法直接对无名块或行框应用样式，因为没有可以应用样式的地方
+        （注意，行框和行内框是两个概念）。<br /> 
+        &nbsp;&nbsp;&nbsp; 但是，这有助于理解在屏幕上看到的所有东西都形成某种框。</div>
+    <h4>CSS 定位机制</h4>
+    <div>三种基本的定位机制：普通流、浮动和绝对定位。</div>
+    <div>除非专门指定，否则所有框都在普通流中定位。也就是说，普通流中的元素的位置由元素在 (X)HTML 中的位置决定。<br />
+
+            块级框从上到下一个接一个地排列，框之间的垂直距离是由框的垂直外边距计算出来。<br />
+            行内框在一行中水平布置。可以使用水平内边距、边框和外边距调整它们的间距。<br />
+            但是，垂直内边距、边框和外边距不影响行内框的高度。<br />
+            由一行形成的水平框称为"行框"（Line Box），行框的高度总是足以容纳它包含的所有行内框。
+            不过，设置行高可以增加这个框的高度。</div>
+    <h4>1、普通流（标准流）(normal flow)</h4>
+    <h4>2、定位(position)</h4>
+    <div>定位的主要价值就是 移动位置， 让盒子到我们想要的位置上去。</div>
+    <div>元素的定位属性主要包括定位模式和边偏移两部分。</div>
+    <h5 class="h5">定位模式(定位的分类)</h5>
+    <div>&nbsp;&nbsp;&nbsp; 1-static	自动定位（默认定位方式）</div>
+    <div>&nbsp;&nbsp;&nbsp; 2-relative         相对定位，相对于其原文档流的位置进行定位 不脱标，占有位置</div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+        注意：在使用相对定位时，无论是否进行移动，元素仍然占据原来的空间。
+        因此，移动元素会导致它覆盖其它框。</div>
+    <div>&nbsp;&nbsp;&nbsp; 3-absolute	绝对定位，相对于其上一个已经定位的父元素进行定位 完全脱标，不占有位置</div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+        注意： 绝对定位最重要的一点：它通过边偏移移动位置，但是它完全脱标，完全不占位置。
+            元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。
+            <br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+            提示：因为绝对定位的框与文档流无关，所以它们可以覆盖页面上的其它元素。
+            通过绝对定位，元素可以放置到页面上的任何位置。可以通过设置 z-index 属性来控制这些框的堆放次序
+    </div>
+    <span class="h6">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+        父级没有定位:
+    </span>
+    <span>若所有父元素都没有定位，以浏览器为准对齐(document文档)。
+            注释：根据用户代理的不同，最初的包含块可能是画布或 HTML 元素。</span>
+            <br />
+    <span class="h6">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+        父级有定位:
+    </span>
+    <span>依据最近的已经定位（绝对、固定或相对定位）的父元素（祖先）进行定位。</span>
+    <br />
+    <span class="h6">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+        子绝父相:
+    </span>
+    <span>因为子级是绝对定位，不会占有位置， 可以放到父盒子里面的任何一个地方。 
+            父盒子布局时，需要占有位置，因此父亲只能是 相对定位.
+    </span><br />
+    <span class="h6">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        绝对定位的盒子水平/垂直居中:
+    </span>
+    <span>普通的盒子是左右margin改为auto就可,但是对于绝对定位就无效了<br />
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            绝对定位的盒子也可以水平或者垂直居中，有一个算法。                       
+            1、首先left 50% 父盒子的一半大小                                                   
+            2、然后走自己外边距负的一半值就可以了 margin-left。
+    </span>
+    <div>&nbsp;&nbsp;&nbsp; 4-fixed	固定定位，相对于浏览器窗口进行定位 完全脱标，不占有位置</div>
+    <div>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        两点： 1、 固定定位的元素跟父亲没有任何关系，只认浏览器 
+        2、固定定位完全脱标，不占有位置，不随着滚动条滚动。
+    </div>
+    <pre class="nbsp">    5-溢出 overflow:scroll、hidden、auto、默认值visible</pre>
+    <pre class="nbsp">    6-设置元素的形状 clip    例clip:rect(0px 50px 200px 0px)</pre>
+    <pre class="nbsp">    7-垂直对齐方式 vertical-align   vertical-align:text-top
+                                                     vertical-align:text-bottom</pre>
+    <pre class="nbsp">    8-叠放次序（z-index）:只有相对定位，绝对定位，固定定位有此属性，
+                其余标准流，浮动，静态定位都无此属性，亦不可指定此属性.</pre>
+    <div>&nbsp;&nbsp;&nbsp; 9-定位模式转换:  跟浮动一样，元素添加了绝对定位和固定定位之后，元素模式也会发生转换，
+        都转换为行内块模式，<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        因此比如行内元素如果添加了绝对定位或者固定定位后浮动后，可以不用转换模式，直接给高度和宽度就可以了。   </div>
+    <h5 class="h5">边偏移</h5>
+    <pre class="nbsp">            top	顶端偏移量，定义元素相对于其父元素上边线的距离 
+            bottom	底部偏移量，定义元素相对于其父元素下边线的距离 
+            left	左侧偏移量，定义元素相对于其父元素左边线的距离 
+            right	右侧偏移量，定义元素相对于其父元素右边线的距离
+            定位要和边偏移搭配使用</pre>
+    <h4>3、浮动(float)</h4>
+    <div>浮动的主要目的是 让多个块级元素一行显示</div>
+    <pre class="nbsp">float:属性值;
+            left	元素向左浮动                                                                           
+            right	元素向右浮动                                                                           
+            none	元素不浮动（默认值）
+            inherit	规定应该从父元素继承 float 属性的值。
+            注释：任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 "inherit"。
+            1.浮动只有左右浮动。浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+            2.浮动脱离标准流，不占位置，会影响标准流。
+            由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。
+            3.float 属性定义元素在哪个方向浮动。以往这个属性总应用于图像，使文本围绕在图像周围，
+            在 CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。
+            4.如果浮动非替换元素，则要指定一个明确的宽度；否则，它们会尽可能地窄。
+            注释：假如在一行之上只有极少的空间可供浮动元素，那么这个元素会跳至下一行，
+            这个过程会持续到某一行拥有足够的空间为止。
+            5.浮动首先创建包含块的概念（包裹）。就是说， 浮动的元素总是找离它最近的父级元素对齐。但是不会超出内边距的范围
+            浮动的元素排列位置，跟上一个元素（块级）有关系。如果上一个元素有浮动，则A元素顶部会和上一个元素的顶部对齐；
+            如果上一个元素是标准流，则A元素的顶部会和上一个元素的底部对齐。
+            6.一个父盒子里面的子盒子，如果其中一个子级有浮动的，则其他子级都需要浮动。这样才能一行对齐显示。
+            总结： 浮动 ---> 浮动的目的就是为了让多个块级元素同一行上显示。
+            7.元素添加浮动后，元素会具有行内块元素的特性。
+            元素的大小完全取决于定义的大小或者默认的内容多少浮动根据元素书写的位置来显示相应的浮动。
+        </pre>
+        <img src="../assets/logo.png" alt="测试浮动" title="测试浮动"
+        height="100px" width="100px" style="float: left;">
+        <div>这个是测试看一下浮动是什么意思，唉，看了好久w3的浮动看不懂，描述太抽象了。1234567890qwertyuiopasdfghjklzxcvbnm
+            这个是测试看一下浮动是什么意思，唉，看了好久w3的浮动看不懂，描述太抽象了。1234567890qwertyuiopasdfghjklzxcvbnm
+        </div>
+        <img src="../assets/logo.png" alt="" title="1" style="float: left; ">
+        <img src="../assets/logo.png" alt="" title="2" style="float: right;clear: right; ">
+        <h5 class="h5" style="clear :both;">清除浮动</h5>
+        <pre class="nbsp">为什么要清除浮动?（清除浮动本质）
+            由于浮动元素不再占用原文档流的位置，所以它会对后面的元素排版产生影响，
+            假设希望让一个图片浮动到文本块的左边，并且希望这幅图片和文本包含在另一个具有背景颜色和边框的元素中。
+这种情况下，出现了一个问题。因为浮动元素脱离了文档流，所以包围图片和文本的 div 不占据空间。
+清除浮动就是把浮动的盒子圈到里面，让父元素在视觉上包围浮动元素。
+
+</pre>
+        <h5 class="h5">清除浮动的方法</h5>
+        <pre class="nbsp">1.选择器{clear:属性值;}
+            clear: left、right、both 、none;规定元素的哪一侧不允许出现浮动元素。
+            在 CSS1 和 CSS2 中，这是通过自动为清除元素（即设置了 clear 属性的元素）增加上外边距实现的。
+            在 CSS2.1 中，会在元素上外边距之上增加清除空间，而外边距本身并不改变。
+            不论哪一种改变，最终结果都一样，如果声明为左边或右边清除，会使元素的上外边框边界刚好在该边上浮动元素的下外边距边界之下。</pre>
+        <pre class="nbsp">2.对容器 div 进行浮动
+            这样会得到我们希望的效果。不幸的是，下一个元素会受到这个浮动元素的影响。
+            为了解决这个问题，有些人选择对布局中的所有东西进行浮动，然后使用适当的有意义的元素（常常是站点的页脚）对这些浮动进行清理。
+            这有助于减少或消除不必要的标记。
+            事实上，W3School 站点上的所有页面都采用了这种技术，如果您打开我们使用 CSS 文件，
+            您会看到我们对页脚的 div 进行了清理，而页脚上面的三个 div 都向左浮动。</pre>
+        <pre class="nbsp">3.额外标签法
+            是W3C推荐的做法,是通过在浮动元素末尾添加一个空的标签例如 ，或则其他标签br等亦可。
+            优点： 通俗易懂，书写方便 
+            缺点： 添加许多无意义的标签，结构化较差。                                     
+            我只能说，w3c你推荐的方法我不接受，你不值得拥有。。。</pre>
+        <pre class="nbsp">4.父级添加overflow属性方法
+            可以通过触发BFC的方式，可以实现清除浮动效果。（BFC后面讲解）
+            可以给父级添加： overflow为 hidden|auto|scroll 都可以实现。
+            优点： 代码简洁                                                                                   
+            缺点： 内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素。</pre>
+        <pre class="nbsp">5.使用after伪元素清除浮动
+            使用方法：                                                                                 
+            .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }                                                                             
+            .clearfix {*zoom: 1;} /* IE6、7 专有 */
+            注意： content:"." 里面尽量跟一个小点，或者其他，尽量不要为空，否则再firefox 7.0前的版本会有生成空格。
+            :after 方式为空元素的升级版，好处:不用单独加标签了
+            优点： 符合闭合浮动思想 结构语义化正确                                         
+            缺点： 由于IE6-7不支持:after，使用 zoom:1触发 hasLayout。           
+            代表网站： 百度、淘宝网、网易等</pre>
+        <pre class="nbsp">6.使用before和after双伪元素清除浮动
+            使用方法：                                                           
+            .clearfix:before,.clearfix:after { content:""; display:table;                   
+            /* 这句话可以触发BFC BFC可以清除浮动,BFC我们后面讲 */ }                
+            .clearfix:after { clear:both; }                                                               
+            .clearfix { *zoom:1; }
+            优点： 代码更简洁                                                                            
+            缺点： 由于IE6-7不支持:after，使用 zoom:1触发 hasLayout。            
+            代表网站： 小米、腾讯等
+        </pre>
+        <h3>CSS 水平对齐</h3>
+        <h4>文本对齐</h4>
+        <pre class="nbsp">        text-align: center</pre>
+        <h4>使用 margin 属性来水平对齐</h4>
+        <pre class="nbsp">        对齐块元素:可通过将左和右外边距设置为 "auto"
+        原理是均等地分配可用的外边距。结果就是居中的元素：
+        .center {
+        margin-left:auto;
+        margin-right:auto;
+        width:70%;
+        }
+        注意：如果宽度是 100%，则对齐没有效果。</pre>
+        <h4>使用 position 属性进行 左 和 右 对齐</h4>
+        <pre class="nbsp">对齐元素的方法之一是使用绝对定位：
+        实例
+        .right
+        {
+        position:absolute;
+        right:0px;
+        width:300px;
+        }
+        注释：绝对定位元素会被从正常流中删除，并且能够交叠元素。
+        跨浏览器兼容性问题</pre>
+        <h4>使用 float 属性来进行 左 和 右 对齐</h4>
+        <pre class="nbsp">    .right {
+        float:right;
+        width:300px;
+        }
+        跨浏览器兼容性问题
+    </pre>
+    <h3>CSS分类</h3>
+    <h4>clear 设置一个元素的侧面是否允许其他的浮动元素。</h4> 
+    <h4>cursor 规定当指向某元素之上时显示的指针类型。</h4>
+    <h4>display 设置是否及如何显示元素。</h4>
+    <div>规定元素应该生成的框的类型。</div>
+    <h4>float 定义元素在哪个方向浮动。</h4>
+    <h4>position 把元素放置到一个静态的、相对的、绝对的、或固定的位置中。</h4>
+    <h4>visibility 设置元素是否可见或不可见。</h4>
+    <div>visibility:visible;
+            visibility:hidden;</div>
+            <br />
+    <h3>CSS 导航栏</h3>
+    <pre class="nbsp">导航栏 = 链接列表,使用 ul 和 li 元素, li 里面用 a 跳转</pre>
+    <h4>从列表中去掉圆点和外边距：</h4>
+    <pre class="nbsp">    用在垂直、水平导航栏中的标准代码:
+    ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    }       
+    list-style-type:none - 删除圆点。导航栏不需要列表项标记。
+    把外边距和内边距设置为 0 可以去除浏览器的默认设定。
+    </pre>
+    <ul class="nav">
+        <li><a href="#">1.1</a></li>
+        <li><a href="#">1.2</a></li>
+        <li><a href="#">1.3</a></li>
+    </ul>
+    <h4>垂直导航栏</h4>
+    <ul class="cz-nav">
+        <li><a href="#">2.1</a></li>
+        <li><a href="#">2.2</a></li>
+        <li><a href="#">2.3</a></li>
+    </ul>
+    <pre class="nbsp">    构建垂直导航栏，我们只需要定义 a 元素的样式，除了上面的代码之外：
+    a {
+    display:block;
+    width:60px;
+    }
+            
+    display:block - 把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。
+    width:60px - 块元素默认占用全部可用宽度。我们需要规定 60 像素的宽度。
+    注释：请始终规定垂直导航栏中 a 元素的宽度。如果省略宽度，IE6 会产生意想不到的结果。</pre>
+    <h4>水平导航栏</h4>
+    <pre class="nbsp">有两种创建水平导航栏的方法。使用行内或浮动列表项。
+两种方法都不错，但是如果您希望链接拥有相同的尺寸，就必须使用浮动方法。</pre>
+    <h5 class="h5">行内列表项</h5>
+    <ul class="hn-lbx">
+        <li><a href="#">3.1</a></li>
+        <li><a href="#">3.2</a></li>
+        <li><a href="#">3.3</a></li>
+    </ul>
+    <pre class="nbsp">除了上面的“标准”代码，构建水平导航栏的方法之一是将 li 元素规定为行内元素：
+    li {
+    display:inline;
+    }
+            
+    display:inline; - 默认地，li 元素是块元素。在这里，我们去除了每个列表项前后的换行，以便让它们在一行中显示。</pre>
+    <h5 class="h5">浮动列表项</h5>
+    <pre class="nbsp">在上面的例子中，链接的宽度是不同的。
+            为了让所有链接拥有相等的宽度，浮动 li 元素并规定 a 元素的宽度：
+            li {
+            float:left;
+            }
+            a {
+            display:block;
+            width:60px;
+            }
+            
+            float:left - 使用 float 来把块元素滑向彼此。
+            display:block - 把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。
+            width:60px - 由于块元素默认占用全部可用宽度，链接无法滑动至彼此相邻。我们需要规定 60 像素的宽度。</pre>
+    <ul class="fd-lbx">
+        <li><a href="#" style="float: left; width: 50px; ">4.1</a></li>
+        <li><a href="#" style="float: left; width: 50px; ">4.2</a></li>
+        <li><a href="#" style="float: left; width: 50px; ">4.3</a></li>
+    </ul>
+    <h3>CSS图片库</h3>
+    <br />
+    <h3>CSS 图像透明度</h3>
+    <div>opacity 属性</div>
+    <pre class="nbsp">      img {
+            opacity:0.4;
+            filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
+            }
+        IE9, Firefox, Chrome, Opera 和 Safari 使用属性 opacity 来设定透明度。
+        opacity 属性能够设置的值从 0.0 到 1.0。值越小，越透明。
+        IE8 以及更早的版本使用滤镜 filter:alpha(opacity=x)。x 能够取的值从 0 到 100。值越小，越透明。
+    </pre>
+    <h3>CSS2 媒介类型</h3>
+    <pre class="nbsp">媒介类型(Media Types)允许你定义以何种媒介来提交文档。文档可以被显示在显示器、纸媒介或者听觉浏览器等等。
+        @media规则
+        @media 规则使你有能力在相同的样式表中，使用不同的样式规则来针对不同的媒介。
+不同的媒介类型
+        all	用于所有的媒介设备。
+        aural	用于语音和音频合成器。
+        braille	用于盲人用点字法触觉回馈设备。
+        embossed	用于分页的盲人用点字法打印机。
+        handheld	用于小的手持的设备。
+        print	用于打印机。
+        projection	用于方案展示，比如幻灯片。
+        screen	用于电脑显示器。
+        tty	用于使用固定密度字母栅格的媒介，比如电传打字机和终端。
+        tv	用于电视机类型的设备。</pre>
+
+    <h3>CSS3 嵌入上面CSS了</h3>
+    <pre class="nbsp">CSS3 被划分为模块.
+            其中最重要的 CSS3 模块包括：
+            选择器
+            框模型
+            背景和边框
+            文本效果
+            2D/3D 转换
+            动画
+            多列布局
+            用户界面
+        </pre>
+        <h3>CSS3 2D 转换</h3> 
+        <h4>新的转换属性</h4>
+        <div>transform	向元素应用 2D 或 3D 转换。	<br />
+                transform-origin	允许你改变被转换元素的位置。</div>
+        <h4>浏览器支持</h4>
+        <div>Internet Explorer 10、Firefox 以及 Opera 支持 transform 属性。
+                Chrome 和 Safari 需要前缀 -webkit-。
+                注释：Internet Explorer 9 需要前缀 -ms-。</div>  
+        <h4>2D 转换方法</h4>  
+        <h5 class="h5">translate() 方法</h5>
+        <div class="tran">transform: translate(100px,10px); 左100，上10</div>
+        <pre class="nbsp">div {
+                transform: translate(50px,100px);
+                -ms-transform: translate(50px,100px);  /* IE 9 */
+                -webkit-transform: translate(50px,100px); /* Safari and Chrome */
+                -o-transform: translate(50px,100px);  /* Opera */
+                -moz-transform: translate(50px,100px); /* Firefox */
+                }</pre>
+        <h5 class="h5">rotate() 方法</h5>
+        <div class="rota">transform: rotate(-5deg); 逆时针旋转5度</div>
+        <pre class="nbsp">
+ 
+                div {
+                    transform: rotate(30deg);
+                    -ms-transform: rotate(30deg);  /* IE 9 */
+                    -webkit-transform: rotate(30deg); /* Safari and Chrome */
+                    -o-transform: rotate(30deg);  /* Opera */
+                    -moz-transform: rotate(30deg);  /* Firefox */
+                    }</pre>
+        <h5 class="h5">scale() 方法</h5>
+        <div class="scale"></div>
+        <div>transform: scale(10,2);宽度转换为原始尺寸的10倍，高度转换为原始高度的2倍。</div>
+        <h5 class="h5">skew() 方法</h5>
+        <div class="skew">transform: skew(20deg, 0deg);元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数</div>
+        <h5 class="h5">matrix() 方法</h5>
+        <div class="matrix">transform: matrix(10px, 10px, 10px, 10px, 10px, 10px);</div>
+        <h5 class="h5">2D Transform 方法</h5>
+        <pre class="nbsp">        matrix(n,n,n,n,n,n)	定义 2D 转换，使用六个值的矩阵。
+        translate(x,y)	定义 2D 转换，沿着 X 和 Y 轴移动元素。
+        translateX(n)	定义 2D 转换，沿着 X 轴移动元素。
+        translateY(n)	定义 2D 转换，沿着 Y 轴移动元素。
+        scale(x,y)	定义 2D 缩放转换，改变元素的宽度和高度。
+        scaleX(n)	定义 2D 缩放转换，改变元素的宽度。
+        scaleY(n)	定义 2D 缩放转换，改变元素的高度。
+        rotate(angle)	定义 2D 旋转，在参数中规定角度。
+        skew(x-angle,y-angle)	定义 2D 倾斜转换，沿着 X 和 Y 轴。
+        skewX(angle)	定义 2D 倾斜转换，沿着 X 轴。
+        skewY(angle)	定义 2D 倾斜转换，沿着 Y 轴。
+    </pre>      
+        <h3>CSS3 3D 转换</h3> 
+        <h4>转换属性</h4>
+        <pre class="nbsp">        transform    向元素应用 2D 或 3D 转换。 
+        transform-origin 允许你改变被转换元素的位置。 
+        transform-style 规定被嵌套元素如何在 3D 空间中显示。
+        perspective        规定 3D 元素的透视效果。
+        perspective-origin 规定 3D 元素的底部位置。 
+        backface-visibility 定义元素在不面对屏幕时是否可见</pre>
+        <h4>浏览器支持</h4>
+        <div>Internet Explorer 10 和 Firefox 支持 3D 转换。
+                Chrome 和 Safari 需要前缀 -webkit-。
+                Opera 仍然不支持 3D 转换（它只支持 2D 转换）。
+        </div>  
+        <h5 class="h5">rotateX() 方法</h5>
+        <div class="rotatex">transform: rotateX(30deg);</div>
+        <h5 class="h5">rotateY() 方法</h5>
+        <div class="rotatey">transform: rotateY(30deg);这个div宽度原本是页面宽度，旋转后视觉变窄了</div>
+        <h4>3D Transform 方法</h4>
+        <pre class="nbsp">        matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) 定义 3D 转换，使用 16 个值的 4x4 矩阵。
+        translate3d(x,y,z)       定义 3D 转化。
+        translateX(x)                     定义 3D 转化，仅使用用于 X 轴的值。
+        translateY(y)                     定义 3D 转化，仅使用用于 Y 轴的值。
+        translateZ(z)                     定义 3D 转化，仅使用用于 Z 轴的值。
+        scale3d(x,y,z)      定义 3D 缩放转换。
+        scaleX(x)                     定义 3D 缩放转换，通过给定一个 X 轴的值。
+        scaleY(y)                     定义 3D 缩放转换，通过给定一个 Y 轴的值。
+        scaleZ(z)                     定义 3D 缩放转换，通过给定一个 Z 轴的值。
+        rotate3d(x,y,z,angle)      定义 3D 旋转。
+        rotateX(angle) 定义沿 X 轴的 3D 旋转。
+        rotateY(angle) 定义沿 Y 轴的 3D 旋转。
+        rotateZ(angle) 定义沿 Z 轴的 3D 旋转。
+        perspective(n) 定义 3D 转换元素的透视视图。
+
+    </pre>
+        <h3>CSS3 过渡</h3> 
+        <h4>过渡属性</h4>
+        <pre class="nbsp">transition    简写属性，用于在一个属性中设置四个过渡属性。 
+        transition-property 规定应用过渡的 CSS 属性的名称。 
+        transition-duration 定义过渡效果花费的时间。默认是 0。 
+        transition-timing-function规定过渡效果的时间曲线。默认是 "ease"。 
+        transition-delay 规定过渡效果何时开始。默认是 0。</pre>
+        <h4>浏览器支持</h4>
+        <div>Internet Explorer 10、Firefox、Chrome 以及 Opera 支持 transition 属性。
+                Safari 需要前缀 -webkit-。 
+                注释：Internet Explorer 9 以及更早的版本，不支持 transition 属性。
+                注释：Chrome 25 以及更早的版本，需要前缀 -webkit-。
+        </div>
+    <pre class="nbsp transition">应用于宽度属性的过渡效果，时长为 2 秒：
+            div {
+            transition: width 2s;
+            -moz-transition: width 2s; /* Firefox 4 */
+            -webkit-transition: width 2s; /* Safari 和 Chrome */
+            -o-transition: width 2s; /* Opera */
+            }</pre>
+        <h4>多项改变</h4>
+        <pre class="nbsp">如需向多个样式添加过渡效果，请添加多个属性，由逗号隔开：
+                div{
+                transition: width 2s, height 2s, transform 2s;
+                -moz-transition: width 2s, height 2s, -moz-transform 2s;
+                -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+                -o-transition: width 2s, height 2s,-o-transform 2s;
+                }
+            
+            </pre>
+        <h3>CSS3 动画</h3>
+        <h4>@keyframes 规则</h4>
+        <h5 class="h5">浏览器支持</h5>
+        <pre class="nbsp">    Internet Explorer 10、Firefox 以及 Opera 支持 @keyframes 规则和 animation 属性。
+    Chrome 和 Safari 需要前缀 -webkit-。
+    注释：Internet Explorer 9，以及更早的版本，不支持 @keyframe 规则或 animation 属性。</pre>
+        <h4>CSS3 动画属性</h4>
+        <pre class="nbsp">@keyframes                规定动画。 
+        animation                所有动画属性的简写属性，除了 animation-play-state 属性。 
+        animation-name 规定 @keyframes 动画的名称。 
+        animation-duration 规定动画完成一个周期所花费的秒或毫秒。默认是 0。 
+        animation-timing-function规定动画的速度曲线。默认是 "ease"。 
+        animation-delay 规定动画何时开始。默认是 0。 
+        animation-iteration-count规定动画被播放的次数。默认是 1。 
+        animation-direction 规定动画是否在下一周期逆向地播放。默认是 "normal"。 
+        animation-play-state 规定动画是否正在运行或暂停。默认是 "running"。 
+        animation-fill-mode 规定对象动画时间之外的状态。
+    
+    </pre>
+    <h3>CSS3 多列</h3>
+    <h4>浏览器支持</h4>
+    <h4>column-count属性</h4>
+    <h4>column-gap属性</h4>
+    <h4>column-rule属性</h4>
+    <h4>新的多列属性</h4>
+    <pre class="nbsp">    column-count 规定元素应该被分隔的列数。 
+    column-fill                     规定如何填充列。 
+    column-gap                     规定列之间的间隔。 
+    column-rule                     设置所有 column-rule-* 属性的简写属性。 
+    column-rule-color 规定列之间规则的颜色。 
+    column-rule-style 规定列之间规则的样式。 
+    column-rule-width 规定列之间规则的宽度。 
+    column-span 规定元素应该横跨的列数。 
+    column-width 规定列的宽度。 
+    columns                     规定设置 column-width 和 column-count 的简写属性。
+
+</pre>
+    <h3>CSS3 用户界面</h3>
+    <h4>浏览器支持</h4>
+    <pre class="nbsp">    Firefox、Chrome 以及 Safari 支持 resize 属性。
+    Internet Explorer、Chrome、Safari 以及 Opera 支持 box-sizing 属性。Firefox 需要前缀 -moz-。
+    所有主流浏览器都支持 outline-offset 属性，除了 Internet Explorer。</pre>
+    <h4>resize 属性</h4>
+    <h4>box-sizing 属性</h4>
+    <h4>outline-offset 属性</h4>
+    <h4>新的用户界面属性</h4>
+    <pre class="nbsp">    appearance 允许您将元素设置为标准用户界面元素的外观 
+    box-sizing 允许您以确切的方式定义适应某个区域的具体内容。 
+    icon 为创作者提供使用图标化等价物来设置元素样式的能力。 
+    nav-down 规定在使用 arrow-down 导航键时向何处导航。 
+    nav-index 设置元素的 tab 键控制次序。 
+    nav-left 规定在使用 arrow-left 导航键时向何处导航。 
+    nav-right 规定在使用 arrow-right 导航键时向何处导航。 
+    nav-up 规定在使用 arrow-up 导航键时向何处导航。 
+    outline-offset对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。
+    resize 规定是否可由用户对元素的尺寸进行调整。</pre>
+        <div>一个浮动面试题</div>
+        <div class="a">
+                <div class="b">123324444444444444444444444444444444444444444444444444444444444444444444444444444
+                    44444444444444444444444444444444444444ggggggggggggggggggggggggggggg
+                </div>
+        </div>
+        
+        
+
+
+        
+
+
+
+            
+
+    
+
+    
+    
+
+    
+</body>
+</html>

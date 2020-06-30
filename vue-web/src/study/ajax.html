@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="testA()"></button>
+    
+</body>
+<script>
+    function testA() {
+        $.ajax({
+            url:"http://101.201.254.58:8910/test/info/1",//url地址
+            dataType:"json",//返回的数据类型
+            type:"get",//发起请求的方式
+            success:function(response) {
+                console.log(response);
+                console.log(response.message)
+            
+            },
+            error:function(){
+                alert('网络错误，请稍后再试！');
+            }
+        });
+    }
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</html>

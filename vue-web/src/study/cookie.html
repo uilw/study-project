@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<head>
+<script>
+function setCookie(cname,cvalue,exdays){
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+function checkCookie(){
+	var user=getCookie("username");
+	if (user!=""){
+		alert("Welcome again " + user);
+	}
+	else {
+		user = prompt("Please enter your name:","");
+  		if (user!="" && user!=null){
+    		setCookie("username",user,30);
+    	}
+	}
+}
+function add(){
+	var user=getCookie("username");
+	
+	if (user!=""){
+		var newuser = prompt("Please enter your name:","");
+  		if (user!="" && user!=null){
+			  user = user + "," + newuser;
+			  var userone = user.split(',');
+			//   for(var i=0;i<userone.length;i++) {
+			// 	  console.log("到数组循环")
+				  
+			//   }
+			var data = userone[userone.length-1];
+				  var div = document.createElement("div");
+				  var parent = document.getElementById("parent");
+				  console.log(document.getElementById("div"));
+				  console.log(document.getElementById("btn"));
+				  document.getElementById("btn").insertBefore(div,parent);
+				  div.innerHTML = data;
+			  
+			  console.log(userone);
+
+
+    		setCookie("username",user,30);
+    		setCookie("userone",userone,30);
+    	}
+	}
+	else {
+		user = prompt("Please enter your name:","");
+  		if (user!="" && user!=null){
+    		setCookie("username",user,30);
+    	}
+	}
+}
+</script>
+</head>	
+<body οnlοad="checkCookie()">
+
+	<button onclick="add()">ADD</button>
+
+	<button onclick="checkCookie()" id="btn">checkCookie
+		<div id="parent">Parent</div>
+	</button>
+</body>	
+</html>
