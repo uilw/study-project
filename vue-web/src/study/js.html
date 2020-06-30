@@ -69,7 +69,7 @@
     function ajaxRequest() {
         console.log(`执行了ajax`);
         var xhr = new XMLHttpRequest();
-        xhr.onReadyStateChange = function() {
+        xhr.onreadystatechange = function() {
             if(xhr.readyState == 4) {
                 if((xhr.status > 200 && xhr.status < 300)|| xhr.status ==304){
                     alert(xhr.responseText);
