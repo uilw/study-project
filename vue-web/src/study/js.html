@@ -67,9 +67,15 @@
     }
 
     function ajaxRequest() {
-        console.log(`执行了ajax`);
         var xhr = new XMLHttpRequest();
+
+        console.log(`开始执行ajax，readyState is ` + xhr.readyState);
+
         xhr.onreadystatechange = function() {
+
+            console.log("请求状态变化，readyState is " + xhr.readyState)
+            // console.log(xhr)
+
             if(xhr.readyState == 4) {
                 if((xhr.status > 200 && xhr.status < 300)|| xhr.status ==304){
                     alert(xhr.responseText);
@@ -78,10 +84,11 @@
                 alert(`Request was unsuccessful: &{xhr.status}`)
             }
         }
+
         xhr.open("get","http://101.201.254.58:8910/test/info/1",true);
         xhr.send(null);
-        console.log(`再次执行了ajax`);
-        console.log(xhr.readyState);
+
+        console.log(`代码结束位置，readyState is ` + xhr.readyState);
     }
     
 </script>
