@@ -59,8 +59,8 @@
         // new eval();
     } catch (error) {
         // message属性-所有浏览器都支持-跨浏览器编程最好只用message属性
-        alert(error.message);
-        alert(error.name);
+        console.log(error.message);
+        console.log(error.name);
         console.log(`判断类型：${error instanceof ReferenceError}`);
     }finally{
         console.log("finally子句总会执行");
@@ -78,16 +78,20 @@
 
             if(xhr.readyState == 4) {
                 if((xhr.status >= 200 && xhr.status < 300)|| xhr.status ==304){
-                    alert(xhr.responseText);
+                    console.log(xhr.responseText);
                 } 
             } else {
-                alert(`Request was unsuccessful: &{xhr.status}`)
+                console.log(`Request was unsuccessful: &{xhr.status}`)
             }
         }
 
+        console.log(`判断状态变化后，open方法未执行，readyState is ${xhr.readyState}`);
         xhr.open("get","http://101.201.254.58:8910/test/info/1",true);
+        console.log(`open已执行，send未执行，readyState is ${xhr.readyState}`);
         xhr.send(null);
-
+        console.log(`open、send已执行，readyState is ${xhr.readyState}`);
+        // 取消异步请求
+        // xhr.abort();
         console.log(`代码结束位置，readyState is ` + xhr.readyState);
     }
     
