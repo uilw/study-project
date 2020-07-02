@@ -11,7 +11,6 @@
 
 <body>
     <div>暂时看console吧</div>
-    <button type= "button" onclick="ajaxRequest()">ajax请求按钮</button>
 </body>
 
 <script src="lr.js"></script>
@@ -61,46 +60,7 @@
         console.log(`判断类型：${error instanceof ReferenceError}`);
     }finally{
         console.log("finally子句总会执行");
-    }
-
-    function ajaxRequest() {
-        var xhr = new XMLHttpRequest();
-
-        console.log(`开始执行ajax，readyState is ` + xhr.readyState);
-
-        xhr.onreadystatechange = function() {
-
-            console.log("请求状态变化，readyState is " + xhr.readyState)
-            // console.log(xhr)
-
-            if(xhr.readyState == 4) {
-                if((xhr.status >= 200 && xhr.status < 300)|| xhr.status ==304){
-                    console.log(xhr.responseText);
-                    // 跨域XHR对象的限制：
-                    // 调用getAllResponseHeader()方法总会返回空字符串
-                    // 详见红宝书-21.4.2
-                    console.log(xhr.getResponseHeader("MyHeader"));
-                    console.log(xhr.getAllResponseHeaders());
-                } 
-            } else {
-                console.log(`Request was unsuccessful: &{xhr.status}`)
-            }
-        }
-      
-        console.log(`判断状态变化后，open方法未执行，readyState is ${xhr.readyState}`);
-        xhr.open("get","http://101.201.254.58:8910/test/info/1",true);
-        console.log(`open已执行，send未执行，readyState is ${xhr.readyState}`);
-        // 跨域XHR对象的限制：
-        // 不能使用setRequestHeader()设置自定义头部
-        // 详见红宝书-21.4.2
-        xhr.setRequestHeader("MyHeader","MyValue");
-        xhr.send(null);
-        console.log(`open、send已执行，readyState is ${xhr.readyState}`);
-        // 取消异步请求
-        // xhr.abort();
-        console.log(`代码结束位置，readyState is ` + xhr.readyState);
-    }
-    
+    }   
 </script>
 
 </html>
